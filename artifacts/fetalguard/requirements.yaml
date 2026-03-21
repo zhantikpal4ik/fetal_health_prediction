@@ -1,0 +1,13 @@
+packages:
+  "recharts": "Required for dashboard analytics and distribution charts"
+  "framer-motion": "Required for smooth page transitions and the ML loading analysis states"
+  "date-fns": "For formatting mock timestamps and dates"
+  "lucide-react": "For healthcare and UI icons"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes without conflicts"
+
+images: []
+
+notes:
+  - This is a frontend-only prototype using mock data.
+  - No backend is required; all interactions use local state and mock delays to simulate ML processing.
