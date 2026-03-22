@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "FetalGuard"
+version = "1.0.0"
+id = "artifacts/fetalguard"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24233
+
+[services.development]
+run = "pnpm --filter @workspace/fetalguard run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fetalguard", "run", "build" ]
+publicDir = "artifacts/fetalguard/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24233"
+BASE_PATH = "/"
